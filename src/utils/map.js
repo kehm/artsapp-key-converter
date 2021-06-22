@@ -115,6 +115,7 @@ export const mapTaxa = (species, images, language) => {
             id: `${element.speciesId}`,
             scientificName: element.latinName,
             vernacularName: { [language]: element.localName },
+            description: element.speciesText ? { [language]: element.speciesText } : undefined,
             media: generateMediaId(image ? image.image : undefined),
             order: element.order,
             family: element.family,
